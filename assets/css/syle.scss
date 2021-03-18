@@ -1,0 +1,523 @@
+/*
+@File: Children Cancer Hospital Template Styles
+
+* This file contains the styling for the actual template, this
+is the file you need to edit to change the look of the
+template.
+
+This files table contents are outlined below>>>>>
+
+*******************************************
+*******************************************
+** - Default CSS
+** - Mobile Menu Style Area
+** - Preloader Style Area
+** - Nav style area CSS
+*/
+
+/*================================================
+Default CSS
+=================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+$primary-color1: #000;
+$primary-font: 'Neuton', serif;
+$secondary-font: 'Open Sans', sans-serif;
+$primary-color2: #fff;
+$primary-color3:#FC2C52;
+$primary-color4: #222;;
+
+body {
+    padding:0;
+    margin:0;
+    scroll-behavior: smooth;
+    overflow-x:hidden;
+}
+a {
+    text-decoration:none !important;
+}
+ul{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style: none;
+}
+button {
+    outline:none !important;
+}
+
+h1,h2.h3,h4,h5,h6 {
+    line-height: 1.3;
+    font-family: $primary-font;
+    font-weight: 700;
+    color: $primary-color1;
+}
+p {
+    line-height:1.6;
+    font-family: $secondary-font ;
+    
+}
+.default-btn {
+    background:linear-gradient(to right, #FC2C52, #d20e32);
+    color: var(--light-color);
+    border: none;
+    padding: 16px 32px;
+    border-radius: 30px;
+    font-size: 1.5625rem;
+    font-family: $secondary-font;
+    font-weight: 600;
+    color:$primary-color2;
+    transition:all .3s ease-in;
+    &:hover {
+        transition-timing-function: .3s ease-in-out;
+        color:$primary-color4;
+    }
+}
+.custom-nav.fixed-top {
+    transition: all .4s;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
+    border-bottom:1px solid $primary-color3;
+}
+/*================================================
+Navbar Area CSS
+=================================================*/
+.nav-wrapper {
+    .header-top-area {
+        background-color: $primary-color1;
+        padding: 10px 0;
+        a {
+            color: $primary-color2;
+            font-size: 20px;
+            font-family: $secondary-font;
+            font-weight: 400;
+            transition: all .3s ease-in;
+            &:hover {
+                transition-timing-function: .3s ease-in-out;
+                color:$primary-color3;
+            }
+        }
+        .td-table {
+            display: table;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .td-table-cell {
+            display: table-cell;
+            width: 100%;
+            vertical-align: middle;
+        }
+        .td-list-style {
+            padding: 0;
+            list-style: none;
+        }
+        .td-list-inline li {
+            display: inline-block;
+        }
+        .top-info-item {
+            margin-right: 20px;
+        }
+        .top-social-icon-column {
+            text-align: right;
+            .td-list-inline {
+                .top-social-item {
+                    margin-right: 15px;
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        .td-list-style ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    }
+    .custom-nav {
+      background:#fff !important;
+      .custom-navbar {
+          .custom-nav-item {
+              .custom-nav-link {
+                 color: $primary-color4;
+                 font-family: $primary-font;
+                 font-size: 20px;
+                 font-weight: 400;
+                 letter-spacing:1px;
+                 transition: all .3s ease-in;
+                 &:hover {
+                     transition-timing-function: .3s ease-in-out;
+                     color: $primary-color3;
+                 }
+              }
+          }
+          .active {
+            .custom-nav-link { 
+                color:$primary-color3;
+            }
+          }
+      }
+    }
+}
+
+/*================================================
+Preloader Style Area
+=================================================*/
+.loader_bg {
+    position: fixed;
+    z-index: 999999;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .loader {
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+  }
+  
+  .loader::before {
+    content: '';
+    border: 1em solid $primary-color3;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: loader 2s linear infinite;
+            animation: loader 2s linear infinite;
+    opacity: 0;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+  }
+  
+  .loader::after {
+    content: '';
+    border: 1em solid $primary-color3;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: loader 2s linear infinite;
+            animation: loader 2s linear infinite;
+    opacity: 0;
+  }
+  
+  @-webkit-keyframes loader {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes loader {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 0;
+    }
+  }
+/*================================================
+Banner Area CSS
+=================================================*/
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+.banner-wrapper-area {
+    padding:100px 0px 0px 0px;
+    position:relative;
+    .left-triangle{
+      background-image: url('../images/left-triangle.svg');
+      background-position: left bottom;
+      top: 45%;
+      left: 0;
+      right: auto;
+      background-position:contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 180px;
+      height: 420px;
+      animation: float 6s ease-in-out infinite;
+    }
+    .right-triangle {
+        background-image: url('../images/right-triangle.svg');
+        background-position: right top;
+        background-position:contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 180px;
+        height: 420px;
+        top:34px;
+        right:0;
+        animation: float 6s ease-in-out infinite;
+    }
+    .banner-image {
+        margin-top:35px;
+        position:relative;
+        .points-bg {
+            background:url("../images/points.svg");
+            position:absolute;
+            width: 165px;
+            height: 360px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            top: 36%;
+            right: 8px;
+            animation: float 6s ease-in-out infinite;
+        }
+        .o-bg {
+            background:url("../images/o.svg");
+            right: 12%;
+            top: 10%;
+            width: 37px;
+            height: 37px;
+            position:absolute;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            animation: float 6s ease-in-out infinite;
+        }
+    }
+    .banner-area {
+        margin-top:100px;
+        position:relative;
+        &::before {
+            position:absolute;
+            background:url("../images/plus.svg");
+            content:"";
+            top:-30px;
+            left:0;
+            width: 28px;
+            height: 28px;
+        }
+        &::after {
+            position:absolute;
+            content: "";
+            width:60px;
+            height:5px;
+            top:85px;
+            left:0;
+            border-radius:15px;
+            background:linear-gradient(to right, #FC2C52, #d20e32);
+        }
+        h1 {
+            font-weight: 700;
+            font-size: 3.75rem;
+            margin-bottom:35px;
+        }
+        p{
+            font-size: 1.625rem;
+            font-weight: 400;
+            margin-bottom:45px;
+        }
+    }
+}
+/*================================================
+Banner Area CSS
+=================================================*/
+.contribute-wrapper-area {
+    padding:100px 0px 100px 0px;
+    position: relative;
+    .zigzag {
+        background:url("../images/zigzag.svg");
+        position:absolute;
+        width: 92px;
+        height: 360px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        top: -92px;
+        left: 201px;
+        animation: float 6s ease-in-out infinite;
+    }
+    &::before {
+        position: absolute;
+        top: -160px;
+        right: 270px;
+        content:"";
+        background:url("../images/points.svg");
+        width:165px;
+        height:360px;
+        animation: float 6s ease-in-out infinite;
+    }
+    .contribute-wrap {
+        .contribute-inner {
+            h2 {
+                font-size: 2.625rem;
+                font-weight: 700;
+                color:$primary-color4;
+                position:relative;
+                margin-bottom:50px;
+                &::before {
+                    position:absolute;
+                    top:75px;
+                    left:0;
+                    content:"";
+                    width:60px;
+                    height:5px;
+                    border-radius:15px;
+                    background:linear-gradient(to right, #FC2C52, #d20e32);
+                }
+            }
+            p {
+                font-size: 20px;
+                font-weight: 400;
+                color:$primary-color4;
+            }.main-list {
+                li {
+                    a {
+                        position:relative;
+                        color:$primary-color4;
+                        font-weight: 700;
+                        font-size: 22px;
+                        display: block;
+                        line-height: 2.5;
+                        border-bottom: 1px solid #10153166;;
+                        padding-right: 30px;
+                        transition: color ease-in .2s;
+                        &:hover {
+                            color:$primary-color3;
+                        }
+                        &::before {
+                            position:absolute;
+                            top:0;
+                            right:0;
+                            content:"\f054";
+                            font-family: "Font Awesome 5 Free";
+                            right: 6px;
+                            font-size: 20px;
+                            transition: transform ease-in .3s,-webkit-transform ease-in .3s;
+                            color:$primary-color3;
+                        }
+                    }
+                }
+            }
+        }
+        .contribute-list {
+            position:relative;
+            background: $primary-color3;
+            width:100%;
+            padding:16px 32px;
+            border-radius: 8px;
+            hr {
+                color:$primary-color2;
+            }
+            h2 {
+                text-align: center;
+                color:$primary-color2;
+            }
+            .cost {
+                font-size: 1.5rem;
+                font-weight: 400;
+                color:$primary-color2;
+                font-family: $secondary-font;
+            }
+            .number {
+                color: $primary-color2;
+                font-size: 35px;
+            }
+        }
+    }
+    .default-btn-one {
+        background:#1b1c4b;
+        color: $primary-color2;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-size: 1.5625rem;
+        font-family: $secondary-font;
+        font-weight: 600;
+        color:$primary-color2;
+        transition:all .3s ease-in;
+    }
+    .button-btn {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+     .action-item {
+        position: relative;
+        border-radius: 8px;
+        padding: 48px 16px 16px;
+        margin: 48px 8px 16px;
+        min-width: 168px;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in;
+        border:1px solid $primary-color3;
+        a {
+            color:$primary-color4;
+            font-family: $secondary-font;
+            font-weight: 400;
+            font-size: 20px;
+            transition: all .3s ease-in;
+        }
+        &:hover {
+            transition-timing-function: .3s ease-in-out;
+            background: $primary-color3;
+            a {
+                color:$primary-color2;
+                transition-timing-function: .3s ease-in-out;
+            }
+        }
+    }
+     .icon {
+        width: 68px;
+        height: 68px;
+        padding: 12px;
+        border-radius: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        box-shadow: 0 0 8px rgba(252,184,6,.1),0 0 10px rgba(252,184,6,.11),0 0 12px rgba(252,184,6,.21);
+        img {
+            width: 100%;
+            height: 100%;
+            -o-object-fit: contain;
+            object-fit: contain;
+        }
+    }
+    .text {
+        font-size: 1.25rem;
+        font-weight: 600;
+        text-align: center;
+        white-space: nowrap;
+    }
+}
