@@ -143,7 +143,7 @@ Navbar Area CSS
               .custom-nav-link {
                  color: $primary-color4;
                  font-family: $primary-font;
-                 font-size: 20px;
+                 font-size: 15px;
                  font-weight: 400;
                  letter-spacing:1px;
                  transition: all .3s ease-in;
@@ -349,10 +349,10 @@ Banner Area CSS
     }
 }
 /*================================================
-Banner Area CSS
+Contribute Area CSS
 =================================================*/
 .contribute-wrapper-area {
-    padding:100px 0px 100px 0px;
+    padding:100px 0px 50px 0px;
     position: relative;
     .zigzag {
         background:url("../images/zigzag.svg");
@@ -399,7 +399,8 @@ Banner Area CSS
                 font-size: 20px;
                 font-weight: 400;
                 color:$primary-color4;
-            }.main-list {
+            }
+            .main-list {
                 li {
                     a {
                         position:relative;
@@ -519,5 +520,588 @@ Banner Area CSS
         font-weight: 600;
         text-align: center;
         white-space: nowrap;
+    }
+}
+
+/*================================================
+Service Area CSS
+=================================================*/
+.service-wrapper-area {
+    padding:100px 0px 60px 0px;
+    background:url("../images/ssrp-bg.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    position:relative;
+    &::before {
+        position:absolute;
+        top: 95px;
+        left: 95px;
+        content:"";
+        background:url("../images/plus.svg");
+        width: 28px;
+        height: 28px;
+        animation: float 6s ease-in-out infinite;
+    }
+    .service-wrap {
+        .service-inner {
+            .service-title {
+                h2 {
+                    text-align: center;
+                    font-size: 2.8125rem;
+                    font-weight: 700;
+                    color:$primary-color4;
+                    position:relative;
+                    &::before {
+                        position: absolute;
+                        top: 70px;
+                        left: 50%;
+                        content: "";
+                        width: 60px;
+                        height: 5px;
+                        border-radius: 15px;
+                        background: linear-gradient(to right, #FC2C52, #d20e32);
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+        .box-content {
+            margin-top:50px;
+            &:hover {
+               .image {
+                img {
+                    transition-timing-function: .3s ease-in-out;
+                    border:1px solid $primary-color4;
+                }
+               }
+                h4 {
+                    transition-timing-function: .3s ease-in-out;
+                    color:$primary-color3;
+                }
+            }
+            .image {
+               img {
+                   border:1px solid $primary-color2;
+                   border-radius: 5px;
+                   transition: all .3s ease-in;
+               }
+            }
+            h4 {
+                font-size: 30px;
+                font-weight: 700;
+                color:$primary-color4;
+                margin-top:20px;
+                transition: all .3s ease-in;
+            }
+        }
+    }
+    .read-btn {
+        margin-top:50px;
+    }
+}
+
+/*================================================
+Latets Area CSS
+=================================================*/
+.latest-wrapper-area {
+    padding:100px 0px 0px 0px;
+    position:relative;
+    .circle {
+        position:absolute;
+        top:0;
+        right: 0;
+        background:url("../images/circle.svg");
+        animation: float 6s ease-in-out infinite;
+        width: 750px;
+        height: 375px;
+        z-index: -1;
+    }
+    .dots-area {
+        width: 165px;
+        height: 360px;
+        position:absolute;
+        top:25px;
+        left:0;
+        background:url("../images/points.svg");
+        animation: float 6s ease-in-out infinite;
+        z-index: -1;
+    }
+     .sbox-2 {
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 60px 10px;
+        border-radius: 6px;
+        transition: all 300ms ease-in-out;
+        background-color: #fff;
+        border: 1px solid #f5f5f5;
+        transition: all .3s ease-in;
+        box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
+        &:hover {
+            background:$primary-color3;
+            h5 {
+                color:$primary-color2;
+            }
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+            -webkit-transition: all 400ms ease-in-out;
+            transition: all 400ms ease-in-out;
+            .sbox-2-icon {
+                color: #00a3c8;
+                -webkit-transition: all 300ms ease-in-out;
+                transition: all 300ms ease-in-out;
+                width: 50px;
+                position: relative;
+                left: 50%;
+                transform:translateX(-50%);
+                margin-bottom: 15px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    h5 {
+        letter-spacing: -0.5px;
+        margin-top: 25px;
+        margin-bottom: 0;
+        -webkit-transition: all 300ms ease-in-out;
+        transition: all 300ms ease-in-out;
+        font-size: 1.1875rem;
+        color: #004861;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        transition: all .3s ease-in;
+    }
+    .all-btn {
+        margin-top:20px;
+    }
+} 
+
+/*================================================
+About Area CSS
+=================================================*/
+.about-wrapper {
+    padding:100px 0px 0px 0px;
+    position:relative;
+    .circle {
+        position: absolute;
+        top: -81px;
+        right: 80px;
+        background: url(../images/points.svg);
+        -webkit-animation: float 6s ease-in-out infinite;
+        animation: float 6s ease-in-out infinite;
+        width: 298px;
+        height: 360px;
+        z-index: -1;
+    }
+    .abox-2-holder {
+        background-color: #fff;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
+        .abox-2 {
+            padding: 45px 30px 40px;
+            overflow: hidden;
+             h5 {
+                margin-bottom: 30px;
+                line-height: 1;
+                font-size: 1.25rem;
+                color: $primary-color3;
+                font-weight: 700;
+                font-family: $secondary-font;
+            }
+            table {
+                margin-bottom: 0;
+                width: 100%;
+                color: #212529;
+                td {
+                    font-size: 15px;
+                    padding: 13px 0;
+                    border-top: none;
+                    border-bottom: 1px dashed #aaa;
+                    font-family: $secondary-font;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+/*================================================
+Research Area CSS
+=================================================*/
+.research-wrapper-area {
+    padding:100px 0px 0px 0px;
+    position:relative;
+    .circle {
+        position:absolute;
+        top:0;
+        left: 0;
+        background:url("../images/circle.svg");
+        animation: float 6s ease-in-out infinite;
+        width: 750px;
+        height: 375px;
+        z-index: -1;
+    }
+    h2 {
+        font-family: $primary-color4;
+        font-weight: 600;
+        margin-bottom: 32px;
+        font-size: 2.8125rem;
+        position: relative;
+        &::before {
+            position: absolute;
+            top: 68px;
+            left:0;
+            content: "";
+            width: 60px;
+            height: 5px;
+            border-radius: 15px;
+            background: -webkit-gradient(linear, left top, right top, from(#FC2C52), to(#d20e32));
+            background: linear-gradient(to right, #FC2C52, #d20e32);
+        }
+    }
+    .main-list {
+        li {
+            a {
+                position:relative;
+                color:$primary-color4;
+                font-weight: 700;
+                font-size: 22px;
+                display: block;
+                line-height: 2.5;
+                border-bottom: 1px solid #10153166;;
+                padding-right: 30px;
+                transition: color ease-in .2s;
+                &:hover {
+                    color:$primary-color3;
+                }
+                &::before {
+                    position:absolute;
+                    top:0;
+                    right:0;
+                    content:"\f054";
+                    font-family: "Font Awesome 5 Free";
+                    right: 6px;
+                    font-size: 20px;
+                    transition: transform ease-in .3s,-webkit-transform ease-in .3s;
+                    color:$primary-color3;
+                }
+            }
+        }
+    }
+}
+
+/*================================================
+Education Area CSS
+=================================================*/
+.education-wrapper-area {
+    padding:100px 0px 0px 0px;
+    position:relative;
+    background:#FFFAF5;
+    position:relative;
+    .circle {
+        position: absolute;
+        height: 375px;
+        display: block;
+        background-image: url(../images/circle.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        left: 50%;
+        top: 0;
+        width: 100%;
+        max-width: 750px;
+        -webkit-transform: translate(-50%,0);
+        transform: translate(-50%,0);
+    }
+    .education-wrap {
+        h2 {
+            margin-bottom: 32px;
+            font-size: 2.8125rem;
+            text-align: center;
+            position:relative;
+            &::before {
+                position: absolute;
+                top: 70px;
+                left: 50%;
+                content: "";
+                width: 60px;
+                height: 5px;
+                border-radius: 15px;
+                background: linear-gradient(to right, #FC2C52, #d20e32);
+                transform: translateX(-50%);
+            }
+        }
+        .box-image {
+            width: 240px;
+            height: 186px;
+            position:relative;
+            margin: 16px auto;
+            .image {
+               position:absolute;
+               top:0;
+               left:0;
+               width:100%;
+               height:100%;
+               background:url("../images/LD-300x231.webp");
+               background-repeat: no-repeat;
+               background-position: center;
+               background-size: contain;
+            }
+        }
+        .item-content {
+            h5 {
+                text-align: center;
+                font-size: 1.75rem;
+                line-height: 38px;
+            }
+        }
+        .links {
+            ul {
+                display: flex;
+                justify-content: center; 
+                margin-top:40px;
+                li {
+                    a.active {
+                        color: $primary-color3;
+                    }
+                    a {
+                        padding: 0 16px;
+                        position: relative;
+                        display: block;
+                        font-family: $secondary-font;
+                        font-size: 1.125rem;
+                        color: $primary-color4;
+                        line-height: 23px;
+                        transition: all .3s ease-in;
+                        &:hover {
+                            transition-timing-function: ease-in-out;
+                            color:$primary-color3;
+                        }
+                        &::before {
+                            content: ".";
+                            position: absolute;
+                            top: 0;
+                            font-size: 2.5rem;
+                            right: 0;
+                            line-height: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .item {
+        display:flex;
+        h5 {
+          margin-top:20px;
+          font-size: 1.2rem;
+        }
+        .default {
+            margin-left: 70px;
+        }
+    }
+}
+
+.main-footer {
+    padding: 48px 0 0;
+    overflow: hidden;
+    background-color: #fff;
+    position:relative;
+    .circle {
+        width: 165px;
+        height: 360px;
+        position: absolute;
+        top: 25px;
+        right: 0;
+        background: url(../images/points.svg);
+        -webkit-animation: float 6s ease-in-out infinite;
+        animation: float 6s ease-in-out infinite;
+    }
+    .zigzag {
+        background: url(../images/zigzag.svg);
+        position: absolute;
+        width: 92px;
+        height: 360px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        top: -92px;
+        left: 0;
+        -webkit-animation: float 6s ease-in-out infinite;
+        animation: float 6s ease-in-out infinite;
+    }
+    .main-title {
+        color: $primary-color4;
+        .title {
+            font-size: 1.75rem;
+            position:relative;
+            margin-bottom: 40px;
+            &::after {
+                content: "";
+                display: block;
+                margin-top: 8px;
+                width: 60px;
+                height: 5px;
+                border-radius: 15px;
+                position:absolute;
+                background: linear-gradient(to right, #FC2C52, #d20e32);
+            }
+        }
+    }
+    .social-list {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 32px;
+        padding: 0;
+        li:first-child a {
+            margin-left: 0;
+        }
+        li {
+            a {
+                display: block;
+                width: 40px;
+                height: 40px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                margin: 0 8px;
+                line-height: 40px;
+                text-align: center;
+                font-size: 18px;
+                color: $primary-color2;
+                transition:all .3s ease-in;
+                &:hover {
+                    transition-timing-function: ease-in-out;
+                    background:$primary-color2 !important;
+                    color:$primary-color3;
+                    border:1px solid $primary-color3;
+                }
+            }
+        }
+    }
+    li.facebook a {
+        background-color: #1d67ba;
+        border:1px solid #1d67ba;
+    }
+    li.twitter a {
+        background-color:#00baf2;
+        border:1px solid #00baf2;
+    }
+    li.linked-in a {
+        background-color: #055995;
+        border:1px solid #055995;
+    }
+    li.youtube a {
+        background-color: #d10703;
+        border:1px solid #d10703;
+    }
+    li.instagram a {
+        background: radial-gradient(circle at 30% 107%,#fdf497 0,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 102%)!important;
+        border:1px solid #d6249f;
+    }
+    .app-download {
+        display: flex;
+        .btn {
+            width: 119px;
+            height: 39px;
+            padding: 0;
+            margin-top: 16px;
+            margin-right: 9px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            border-radius: 10px;
+        }
+    }
+    .list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            padding-left: 38px;
+            position: relative;
+            margin-bottom: 16px;
+            .fas.fa-phone-volume {
+                font-size: 1.5rem;
+            }
+            .fas {
+                position: absolute;
+                left: 0;
+                top: 4px;
+                color: $primary-color3;
+                font-size: 1.25rem;
+                width: 28px;
+                text-align: center;
+            }
+            .text {
+                font-family: $primary-font;
+                font-weight: 600;
+                font-size: 14px;
+                margin-bottom: 8px;
+                display: block;
+                line-height: 23px;
+            }
+            .mail {
+                font-size: 20px !important;
+                a {
+                    color: $primary-color3;
+                }
+            }
+        }
+    }
+    .phone {
+        font-size: 35px !important;
+        margin-bottom: 24px !important;
+    }
+    .links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        a {
+            font-size: .875rem;
+            font-weight: 600;
+            line-height: 26px;
+            color: $primary-color4;
+            display: block;
+            padding: 2px 0;
+            -webkit-transition: all .3s cubic-bezier(.67,.14,.04,.96);
+            transition: all .3s cubic-bezier(.67,.14,.04,.96);
+            &::before {
+                content: "-";
+                margin-right: 4px;
+                font-size: .75rem;
+            }
+        }
+    }
+    .jci-prize {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .text {
+            margin-top: 16px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: $primary-font;
+        }
+    }
+    .bottom-footer {
+        margin-top: 32px;
+        border-top: 1px solid #faefe4;
+        .copy {
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 50px;
+            margin: 0;
+            font-family: $secondary-font;
+            text-align: center;
+        }
     }
 }

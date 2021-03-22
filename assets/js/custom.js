@@ -36,4 +36,7 @@ $(function() {
                 },
             }
         })
+        // START WOW ACTIVE JS CODE
+		new WOW().init();
+		// END WOW ACTIVE JS CODE
 });
